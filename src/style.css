@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义样式 */
+.swiper-fade-enter-active,
+.swiper-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.swiper-fade-enter-from,
+.swiper-fade-leave-to {
+  opacity: 0;
+}
+
+/* 确保图片比例保持16:9 */
+.swiper-image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .swiper-container {
+    height: 200px;
+  }
+}
+
+@media (min-width: 769px) {
+  .swiper-container {
+    height: 400px;
+  }
+}
